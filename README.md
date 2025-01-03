@@ -14,9 +14,8 @@ NetScan是一款轻量级的网络扫描工具，支持多语言。它结合了 
 
 ##### 使用
 
-克隆项目到本地：
-git clone https://github.com/your-repo/NetPulse.git
-cd NetPulse
+git clone https://github.com/YJinhong/NetScan.git
+cd NetScan
 
 安装依赖：
 pip install -r requirements.txt
