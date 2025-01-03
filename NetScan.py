@@ -1,3 +1,9 @@
+# -*- coding: UTF-8 -*-
+"""
+Author: YJinhong
+Repositories: https://github.com/YJinhong/NetScan.git
+Version: 1.0.0
+"""
 import scapy.all as scapy
 import nmap
 import concurrent.futures
