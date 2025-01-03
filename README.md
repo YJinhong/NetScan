@@ -23,6 +23,9 @@ pip install -r requirements.txt
 运行程序：
 python main.py
 
+安装Nmap：
+https://nmap.org/
+
 ##### 结果
 
 扫描结果会显示在日志中，同时以清晰的列表形式呈现在GUI中。
