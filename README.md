@@ -61,9 +61,7 @@ NetScan是一款轻量级的网络扫描工具，支持多语言。它结合了 
 
 ## 如何使用
 
-#### 简单使用
-
-##### 使用
+#### 使用
 
 git clone https://github.com/YJinhong/NetScan.git
 cd NetScan
@@ -76,6 +74,24 @@ python main.py
 
 安装Nmap：
 https://nmap.org/
+
+#### 如何更改扫描延迟
+
+##### ARP扫描
+
+ARP 扫描的超时时间： 在 scan_network 函数中，ARP 扫描使用 scapy.srp 函数，其中的 timeout 参数控制每个请求的等待时间。
+
+devices = scapy.srp(arp_request_broadcast, timeout=timeout, verbose=False)[0]
+
+你可以通过修改传递给 timeout 的值来调整扫描的延迟。如果需要动态调整，可以在 UI 中增加一个输入框或滑动条来设置超时时间。
+
+##### Nmap扫描
+
+Nmap 扫描的超时时间： Nmap 的扫描参数（arguments 参数）可以包含 --host-timeout 来设置超时时间。例如：
+
+nm.scan(hosts=ip, arguments="-p 80,443,21,22,23,8080,445,3306,3389,161 -O -sV --host-timeout 10s")
+
+在这里，--host-timeout 10s 表示每个主机的扫描超时时间为 10 秒。
 
 ##### 结果
 
@@ -93,7 +109,7 @@ https://nmap.org/
 
 扫描完成后，结果会自动显示，包含设备IP地址、MAC地址及开放端口信息。
 
-##### 日志
+### 日志
 
 #### 日志记录内容
 每次扫描时，NetScan 会自动生成日志文件，记录以下重要信息：
