@@ -126,7 +126,7 @@ nm.scan(hosts=ip, arguments="-p 80,443,21,22,23,8080,445,3306,3389,161 -O -sV --
 
 ## 开发环境
 
-Python ≥ 3.8
+Python ≥ 3.6
 
 ## 核心模块
 
@@ -137,7 +137,7 @@ pyside6
 
 - Windows 10 及以上
 - Ubuntu 22.04 及以上版本（实验性）
-- 其它支持 Python 3.8.x 的Linux系统（实验性）
+- 其它支持 Python 3.6.x 的Linux系统（实验性）
 - 提示：支持Windows和Linux，暂不支持MacOS。
 
 ## 如何修改GUI
