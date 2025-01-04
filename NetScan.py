@@ -18,7 +18,17 @@ import csv
 import json
 
 # 配置日志记录
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+log_dir = os.path.dirname(os.path.abspath(__file__))  # 获取程序所在的文件夹路径
+log_file = os.path.join(log_dir, "netscan_log.log")  # 创建日志文件路径
+
+logging.basicConfig(
+    level=logging.INFO, 
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_file),  # 将日志保存到指定文件
+        logging.StreamHandler()  # 也可以在控制台输出日志
+    ]
+)
 
 LANGUAGES = {
     "English": {
