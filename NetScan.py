@@ -333,7 +333,7 @@ def create_ui():
     global scan_range_label, language_label, language_combobox, export_button  # 将需要的变量设置为全局
 
     root = tk.Tk()  # 在函数中定义root
-    root.title("Network Scanner")
+    root.title("NetScan")
     
     # 上半部分：扫描进度展示区域，左对齐
     ip_display_frame = tk.Frame(root)
