@@ -457,5 +457,8 @@ def save_as_json(devices, file_path):
     logging.info(f"Scan results saved as JSON to {file_path}")
 
    
-if __name__ == "__main__":
+def main():
     create_ui()
+
+if __name__ == "__main__":
+    main()
